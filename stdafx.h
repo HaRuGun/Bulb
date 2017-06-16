@@ -15,14 +15,12 @@
 #include <vector>
 #include <timeapi.h>
 #pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "msimg32.lib")
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
 #include "SimpleFunction.h"
 #include "ImageManager.h"
 #include "KeyManager.h"
 #include "Object.h"
-#include "Shot.h"
-#include "Mermaid.h"
-#include "ShotManager.h"
 #include "MainProc.h"
 #include "WinMain.h"

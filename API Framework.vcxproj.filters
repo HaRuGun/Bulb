@@ -5,71 +5,51 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Framwork">
-      <UniqueIdentifier>{909c8ddd-bb27-4781-b68f-d18fd5994824}</UniqueIdentifier>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{4a6ab23b-33b4-4b73-b546-bd50e0b0775c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framwork\Manager">
-      <UniqueIdentifier>{634e207b-3c3d-461d-9bec-5b406c29d6a1}</UniqueIdentifier>
+    <Filter Include="Framework\Manager">
+      <UniqueIdentifier>{b0089336-c8a9-4b9d-83fc-78de25348576}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framwork\Manager\ImageManager">
-      <UniqueIdentifier>{c1f86273-9804-411c-b999-72f4053729ee}</UniqueIdentifier>
+    <Filter Include="Framework\Manager\ImageManager">
+      <UniqueIdentifier>{7c4b1945-ad02-4b4e-8e5e-259c7fff6c38}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framwork\Manager\KeyManager">
-      <UniqueIdentifier>{a06c2173-a8b4-44ad-9741-bdabc15f29f7}</UniqueIdentifier>
+    <Filter Include="Framework\Manager\KeyManager">
+      <UniqueIdentifier>{b986b321-3ee9-4c23-ae6a-6cef0433f915}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Framwork\Object">
-      <UniqueIdentifier>{726e47db-49fc-4d22-a4c6-178fc854f9e5}</UniqueIdentifier>
+    <Filter Include="Framework\Object">
+      <UniqueIdentifier>{279397f1-ec88-4b97-9d7b-73292b2bc290}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\MainProc">
-      <UniqueIdentifier>{350219c1-dfc3-4af8-bebd-9987b97aa1c0}</UniqueIdentifier>
+      <UniqueIdentifier>{e7136491-13c2-4787-ad84-49e532cd3bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WinMain.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageManager.cpp">
-      <Filter>Framwork\Manager\ImageManager</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyManager.cpp">
-      <Filter>Framwork\Manager\KeyManager</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>Framwork\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="MainProc.cpp">
-      <Filter>소스 파일\MainProc</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="SimpleFunction.h">
+    <ClInclude Include="stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="SimpleFunction.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="KeyManager.h">
-      <Filter>Framwork\Manager\KeyManager</Filter>
+      <Filter>Framework\Manager\KeyManager</Filter>
     </ClInclude>
     <ClInclude Include="ImageManager.h">
-      <Filter>Framwork\Manager\ImageManager</Filter>
+      <Filter>Framework\Manager\ImageManager</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Framwork\Object</Filter>
+      <Filter>Framework\Object</Filter>
     </ClInclude>
     <ClInclude Include="MainProc.h">
       <Filter>소스 파일\MainProc</Filter>
@@ -77,5 +57,25 @@
     <ClInclude Include="WinMain.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>Framework\Manager\KeyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>Framework\Manager\ImageManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>소스 파일\MainProc</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
