@@ -1,5 +1,7 @@
 ﻿  stdafx.cpp
   WinMain.cpp
+  SceneManager.cpp
+  Scene.cpp
   Object.cpp
   MainProc.cpp
   KeyManager.cpp

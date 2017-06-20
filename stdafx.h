@@ -22,5 +22,7 @@
 #include "ImageManager.h"
 #include "KeyManager.h"
 #include "Object.h"
+#include "Scene.h"
+#include "SceneManager.h"
 #include "MainProc.h"
 #include "WinMain.h"

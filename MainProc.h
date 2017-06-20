@@ -4,8 +4,9 @@
 class Main
 {
 private:
-	// 이미지 메니저 포인터 선언
-	ImageManager *im;
+	// 메니저 포인터 선언
+	ImageManager *igmg;
+	SceneManager *scmg;
 
 	BOOL act;
 	POINT mousePos;
@@ -15,7 +16,8 @@ private:
 
 	/* [ OBJECT START ] */
 
-
+	Scene *first;
+	Scene *Second;
 
 	/* [ OBJECT END ] */
 

@@ -4,14 +4,20 @@
 // 게임이 시작될 때 초기화를 실행하는 함수
 int Main::Init(HWND hWnd)
 {
-	im = new ImageManager;
-	im->Init(hWnd);
+	igmg = new ImageManager;
+	igmg->Init(hWnd);
+	scmg = new SceneManager;
+	scmg->Init();
 
 	curLBState = false;
 	lastLBState = curLBState;
 	/* [ INIT START ] */
 
+	first = new Scene;
+	first->Init();
+	first->SetBackground("./Resource/main background.bmp");
 
+	scmg->SetScene(first);
 
 	/* [ INIT END ] */
 	act = true;
@@ -26,7 +32,7 @@ int Main::Update(HWND hWnd)
 	::ScreenToClient(hWnd, &mousePos);
 	/* [ UPDATE START] */
 
-
+	first->Render();
 
 	/* [ UPDATE END] */
 	lastLBState = curLBState;
@@ -38,14 +44,14 @@ int Main::Update(HWND hWnd)
 // 각 이미지와 애니메이션을 출력하는 함수
 int Main::Render()
 {
-	im->RenderOn();
-	//im->SetBackground(""); // This coad have to use background.bmp
+	igmg->RenderOn();
+	igmg->SetBackground(scmg->GetCurrentScene()->GetBackground());
 	/* [ DRAW SRART ] */
 
-	
+	first->Update();
 
 	/* [ DRAW END ] */
-	im->RenderOff();
+	igmg->RenderOff();
 	return 0;
 }
 
@@ -56,12 +62,14 @@ int Main::Release()
 	act = false;
 	/* [ RELEASE START] */
 
-
+	first->Release();
+	delete(first);
 
 	/* [ RELEASE END] */
+
 	// 매니저 클래스 해제
-	im->Release();
-	delete(im);
+	igmg->Release();
+	delete(igmg);
 
 	PostQuitMessage(0);
 	exit(0);
