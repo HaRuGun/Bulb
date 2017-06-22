@@ -1,9 +1,11 @@
 #pragma once
+#include "Singleton.h"
 
 
 class Object;
 
 class ImageManager
+	: public Singleton<ImageManager>
 {
 private:
 	HWND hWnd;
@@ -30,3 +32,5 @@ public:
 	ImageManager() {}
 	~ImageManager() {}
 };
+
+#define IMAGEMANAGER ImageManager::GetSingleton()

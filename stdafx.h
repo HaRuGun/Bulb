@@ -19,10 +19,15 @@
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
 #include "SimpleFunction.h"
+
 #include "ImageManager.h"
 #include "KeyManager.h"
+
 #include "Object.h"
+
 #include "Scene.h"
 #include "SceneManager.h"
+#include "StartScene.h"
+
 #include "MainProc.h"
 #include "WinMain.h"

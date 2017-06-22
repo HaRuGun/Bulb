@@ -1,23 +1,19 @@
 #include "stdafx.h"
-
+#include "Scene.h"
 
 // 게임이 시작될 때 초기화를 실행하는 함수
 int Main::Init(HWND hWnd)
 {
-	igmg = new ImageManager;
-	igmg->Init(hWnd);
-	scmg = new SceneManager;
-	scmg->Init();
+	IMAGEMANAGER->Init(hWnd);
+	SCENEMANAGER->Init();
 
 	curLBState = false;
 	lastLBState = curLBState;
 	/* [ INIT START ] */
 
-	first = new Scene;
-	first->Init();
-	first->SetBackground("./Resource/main background.bmp");
-
-	scmg->SetScene(first);
+	stScene = new StartScene;
+	stScene->Init();
+	SCENEMANAGER->SetScene(stScene);
 
 	/* [ INIT END ] */
 	act = true;
@@ -31,8 +27,8 @@ int Main::Update(HWND hWnd)
 	::GetCursorPos(&mousePos);
 	::ScreenToClient(hWnd, &mousePos);
 	/* [ UPDATE START] */
-
-	first->Render();
+	
+	stScene->Update();
 
 	/* [ UPDATE END] */
 	lastLBState = curLBState;
@@ -44,14 +40,15 @@ int Main::Update(HWND hWnd)
 // 각 이미지와 애니메이션을 출력하는 함수
 int Main::Render()
 {
-	igmg->RenderOn();
-	igmg->SetBackground(scmg->GetCurrentScene()->GetBackground());
+	char * CurrentBackground = SCENEMANAGER->GetCurrentScene()->GetBackground();
+	IMAGEMANAGER->RenderOn();
+	IMAGEMANAGER->SetBackground(CurrentBackground);
 	/* [ DRAW SRART ] */
 
-	first->Update();
+	stScene->Render();
 
 	/* [ DRAW END ] */
-	igmg->RenderOff();
+	IMAGEMANAGER->RenderOff();
 	return 0;
 }
 
@@ -62,14 +59,14 @@ int Main::Release()
 	act = false;
 	/* [ RELEASE START] */
 
-	first->Release();
-	delete(first);
+	stScene->Release();
+	delete(stScene);
 
 	/* [ RELEASE END] */
 
 	// 매니저 클래스 해제
-	igmg->Release();
-	delete(igmg);
+	IMAGEMANAGER->Release();
+	SCENEMANAGER->Release();
 
 	PostQuitMessage(0);
 	exit(0);
@@ -91,6 +88,23 @@ int Main::LButtonUp()
 {
 	curLBState = false;
 	return 1;
+}
+
+
+BOOL Main::LButtonClick(Object *hit)
+{
+	if (!curLBState)
+		return false;
+
+	if (mousePos.x >= hit->GetX() && mousePos.x <= hit->GetX() + hit->GetWidth()
+		&& mousePos.y >= hit->GetY() && mousePos.y <= hit->GetY() + hit->GetHeight())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 

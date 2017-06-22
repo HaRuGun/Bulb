@@ -1,12 +1,2 @@
-﻿  stdafx.cpp
-  WinMain.cpp
-  SceneManager.cpp
-  Scene.cpp
-  Object.cpp
-  MainProc.cpp
-  KeyManager.cpp
-c:\users\haru\documents\github\bulb\keymanager.cpp(15): warning C4800: 'int': 'true' 또는 'false'로 bool 값을 강제하고 있습니다(성능 경고).
-  ImageManager.cpp
-c:\users\haru\documents\github\bulb\imagemanager.cpp(88): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
+﻿  StartScene.cpp
   API Framework.vcxproj -> C:\Users\HaRu\Documents\GitHub\Bulb\Debug\API Framework.exe

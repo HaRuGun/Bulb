@@ -72,6 +72,12 @@
     <ClInclude Include="Scene.h">
       <Filter>Framework\Manager\SceneManager\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>소스 파일\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Framework\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KeyManager.cpp">
@@ -97,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>Framework\Manager\SceneManager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>소스 파일\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

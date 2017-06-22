@@ -1,4 +1,5 @@
 #pragma once
+#include "Singleton.h"
 
 #define KEYMAX 256
 
@@ -8,6 +9,7 @@ enum KETSTATE
 };
 
 class KeyManager
+	: public Singleton<KeyManager>
 {
 private:
 	bool keyState[KEYMAX];
@@ -38,3 +40,5 @@ public:
 	KeyManager() {}
 	~KeyManager() {}
 };
+
+#define KEYMANAGER KeyManager::GetSingleton()

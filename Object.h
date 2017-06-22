@@ -10,33 +10,24 @@ protected:
 	LPSTR fileName;
 	RECT region;
 
-	int currentFrame;
-	int lastFrame;
-	int frameDir;
 	int width, height;
-
 	float x, y;
-	int xDir, yDir;
-	int xSpd, ySpd;
 
 public:
-	void Init(LPSTR fileName, COLORREF cr, int lf, int fd, int w, int h, float x, float y, int xd, int yd, int xs, int ys);
+	void Init(LPSTR fileName, COLORREF cr, int w, int h, float x, float y);
 	void Update();
 	void Render();
 	void Release();
 
 	void SetPosition(float x, float y);
-	void SetFrameDir(int fd);
 
 	HBITMAP GetImage();
-	float GetX();
-	float GetY();
-	int GetXspd();
-	int GetYspd();
-	int GetWidth();
-	int GetHeight();
 	COLORREF GetColor();
 	RECT GetRegion();
+	int GetWidth();
+	int GetHeight();
+	float GetX();
+	float GetY();
 
 	Object() {}
 	~Object() {}

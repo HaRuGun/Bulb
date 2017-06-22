@@ -1,7 +1,9 @@
 #pragma once
+#include "Singleton.h"
 
 
 class SceneManager
+	: public Singleton<SceneManager>
 {
 protected:
 	Scene *currentScene;
@@ -18,3 +20,5 @@ public:
 	SceneManager() {}
 	virtual ~SceneManager() {}
 };
+
+#define SCENEMANAGER SceneManager::GetSingleton()

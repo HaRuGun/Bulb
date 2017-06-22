@@ -9,15 +9,14 @@ private:
 	SceneManager *scmg;
 
 	BOOL act;
-	POINT mousePos;
 
+	POINT mousePos;
 	BOOL curLBState;
 	BOOL lastLBState;
 
 	/* [ OBJECT START ] */
 
-	Scene *first;
-	Scene *Second;
+	StartScene *stScene;
 
 	/* [ OBJECT END ] */
 
@@ -29,6 +28,8 @@ public:
 
 	int LButtonDown();
 	int LButtonUp();
+	BOOL LButtonClick(Object *hit);
+
 	BOOL GetAct();
 
 	Main() {};
