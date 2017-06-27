@@ -78,6 +78,9 @@
     <ClInclude Include="Singleton.h">
       <Filter>Framework\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="CreditScene.h">
+      <Filter>소스 파일\GameScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="KeyManager.cpp">
@@ -105,6 +108,9 @@
       <Filter>Framework\Manager\SceneManager\Scene</Filter>
     </ClCompile>
     <ClCompile Include="StartScene.cpp">
+      <Filter>소스 파일\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CreditScene.cpp">
       <Filter>소스 파일\GameScene</Filter>
     </ClCompile>
   </ItemGroup>

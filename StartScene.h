@@ -6,6 +6,8 @@ class StartScene :
 {
 protected:
 	Object *objQuit;
+	Object *objCredit;
+	Object *objStart;
 	// main quit basics.bmp
 
 public:

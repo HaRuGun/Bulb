@@ -28,6 +28,7 @@
 #include "Scene.h"
 #include "SceneManager.h"
 #include "StartScene.h"
+#include "CreditScene.h"
 
 #include "MainProc.h"
 #include "WinMain.h"
